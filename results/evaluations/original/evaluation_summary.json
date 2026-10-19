@@ -1,0 +1,42 @@
+[
+  {
+    "dataset": "hh",
+    "judge_model": "google/gemini-3.6-flash",
+    "total_pairs": 300,
+    "valid_judgments": 300,
+    "wins": 111,
+    "ties": 59,
+    "losses": 130,
+    "unresolved": 0,
+    "win_rate_among_decisive": 0.4605809128630705,
+    "win_fraction_among_valid": 0.37,
+    "tie_adjusted_win_rate": 0.4683333333333333,
+    "tie_rate_among_valid": 0.19666666666666666,
+    "unresolved_rate": 0.0,
+    "unresolved_after_attempts": 0,
+    "not_attempted": 0,
+    "request_attempts": 61,
+    "failed_request_attempts": 1,
+    "failed_request_attempt_rate": 0.01639344262295082
+  },
+  {
+    "dataset": "alpaca",
+    "judge_model": "google/gemini-3.6-flash",
+    "total_pairs": 300,
+    "valid_judgments": 300,
+    "wins": 104,
+    "ties": 59,
+    "losses": 137,
+    "unresolved": 0,
+    "win_rate_among_decisive": 0.4315352697095436,
+    "win_fraction_among_valid": 0.3466666666666667,
+    "tie_adjusted_win_rate": 0.445,
+    "tie_rate_among_valid": 0.19666666666666666,
+    "unresolved_rate": 0.0,
+    "unresolved_after_attempts": 0,
+    "not_attempted": 0,
+    "request_attempts": 72,
+    "failed_request_attempts": 12,
+    "failed_request_attempt_rate": 0.16666666666666666
+  }
+]

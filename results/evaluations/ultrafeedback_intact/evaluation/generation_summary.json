@@ -1,0 +1,76 @@
+[
+  {
+    "model": "sft",
+    "maximum_new_tokens": 256,
+    "repetition_penalty": 1.0,
+    "checkpoint_metadata": {
+      "optimizer_step": 938,
+      "validation_loss": 1.3795008834900906,
+      "selection": "lowest validation loss"
+    },
+    "responses": 300,
+    "empty_responses": 0,
+    "responses_ending_with_eos": 187,
+    "responses_hitting_token_limit": 113,
+    "mean_generated_tokens": 162.93333333333334
+  },
+  {
+    "model": "sft",
+    "maximum_new_tokens": 512,
+    "repetition_penalty": 1.0,
+    "checkpoint_metadata": {
+      "optimizer_step": 938,
+      "validation_loss": 1.3795008834900906,
+      "selection": "lowest validation loss"
+    },
+    "responses": 300,
+    "empty_responses": 0,
+    "responses_ending_with_eos": 250,
+    "responses_hitting_token_limit": 50,
+    "mean_generated_tokens": 224.71
+  },
+  {
+    "model": "dpo_ultrafeedback_intact",
+    "maximum_new_tokens": 256,
+    "repetition_penalty": 1.0,
+    "checkpoint_metadata": {
+      "optimizer_step": 250,
+      "validation": {
+        "dpo_loss": 0.5969070506377527,
+        "reward_accuracy": 0.6897590361445783,
+        "reward_margin": 0.40249157086974124,
+        "chosen_reward": -0.0994298185614095,
+        "rejected_reward": -0.5019213915898967,
+        "pairs": 664,
+        "maximum_reference_difference": 52.212646484375
+      }
+    },
+    "responses": 300,
+    "empty_responses": 0,
+    "responses_ending_with_eos": 124,
+    "responses_hitting_token_limit": 176,
+    "mean_generated_tokens": 200.75333333333333
+  },
+  {
+    "model": "dpo_ultrafeedback_intact",
+    "maximum_new_tokens": 512,
+    "repetition_penalty": 1.0,
+    "checkpoint_metadata": {
+      "optimizer_step": 250,
+      "validation": {
+        "dpo_loss": 0.5969070506377527,
+        "reward_accuracy": 0.6897590361445783,
+        "reward_margin": 0.40249157086974124,
+        "chosen_reward": -0.0994298185614095,
+        "rejected_reward": -0.5019213915898967,
+        "pairs": 664,
+        "maximum_reference_difference": 52.212646484375
+      }
+    },
+    "responses": 300,
+    "empty_responses": 0,
+    "responses_ending_with_eos": 223,
+    "responses_hitting_token_limit": 77,
+    "mean_generated_tokens": 298.9
+  }
+]

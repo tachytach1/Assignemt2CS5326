@@ -1,0 +1,5 @@
+{
+  "optimizer_step": 0,
+  "validation_loss": 1.4028361363184503,
+  "selection": "lowest validation loss"
+}

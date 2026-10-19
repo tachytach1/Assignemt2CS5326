@@ -1,0 +1,42 @@
+[
+  {
+    "id": "mistake01",
+    "category": "cooking",
+    "instruction": "I packed twelve mushrooms into a tiny frying pan, and now they are sitting in a puddle instead of browning. Should I add more oil?"
+  },
+  {
+    "id": "mistake02",
+    "category": "cooking",
+    "instruction": "I poured all the stock into my risotto at once and walked away until it dried out. Why is the texture uneven?"
+  },
+  {
+    "id": "mistake03",
+    "category": "cooking",
+    "instruction": "My cake looked cooked outside, so I removed it without checking the middle. It collapsed into a wet crater. What should I change next time?"
+  },
+  {
+    "id": "mistake04",
+    "category": "coding",
+    "instruction": "My program opens the same configuration file inside a loop a million times. I bought more RAM but it is still slow. What am I missing?"
+  },
+  {
+    "id": "mistake05",
+    "category": "coding",
+    "instruction": "I fixed a failing test by deleting its assertion. The test suite is green now, so can I merge the change?"
+  },
+  {
+    "id": "mistake06",
+    "category": "coding",
+    "instruction": "I copied the same validation code into fourteen functions. Now every bug fix needs fourteen edits. Should I copy it into a fifteenth function too?"
+  },
+  {
+    "id": "mistake07",
+    "category": "general",
+    "instruction": "My presentation is tomorrow. I made sixty slides full of paragraphs and have not rehearsed once. Should I spend tonight adding animations?"
+  },
+  {
+    "id": "mistake08",
+    "category": "general",
+    "instruction": "I keep missing deadlines because I agree to every new task without checking my calendar. Should I just promise everyone faster delivery?"
+  }
+]

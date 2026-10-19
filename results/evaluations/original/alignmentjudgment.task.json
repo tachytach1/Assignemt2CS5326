@@ -1,0 +1,5 @@
+{
+  "versionNumber": 1,
+  "name": "alignmentjudgment",
+  "definition": "@kbench.task(name=\"alignmentjudgment\")\ndef requestjudgments(llm, prompt: str):\n    with kbench.chats.new(\"judgment\"):\n        response = llm.prompt(prompt)\n\n    responseholder[\"text\"] = response\n"
+}

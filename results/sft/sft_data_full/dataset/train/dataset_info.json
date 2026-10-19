@@ -1,0 +1,50 @@
+{
+  "citation": "",
+  "description": "",
+  "features": {
+    "source_id": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "instruction_hash": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "instruction": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "prompt": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "response": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "input_ids": {
+      "feature": {
+        "dtype": "int32",
+        "_type": "Value"
+      },
+      "_type": "List"
+    },
+    "labels": {
+      "feature": {
+        "dtype": "int64",
+        "_type": "Value"
+      },
+      "_type": "List"
+    },
+    "sequence_length": {
+      "dtype": "int64",
+      "_type": "Value"
+    },
+    "response_token_count": {
+      "dtype": "int64",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": ""
+}

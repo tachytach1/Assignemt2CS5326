@@ -1,0 +1,109 @@
+{
+  "manifest": {
+    "purpose": "Exploratory mistake-and-correction style diagnostic",
+    "base_model": "HuggingFaceTB/SmolLM2-360M-Instruct",
+    "adapter_directory": "/kaggle/working/persona_lora/adapter",
+    "prompt_file_sha256": "817a3dd18f0c7fb2aea48b38b4336bde5f4b1b41eda5e2185b1922395ed98b2e",
+    "explicit_persona_instruction": false,
+    "decoding": {
+      "do_sample": false,
+      "num_beams": 1,
+      "max_new_tokens": 384,
+      "repetition_penalty": 1.1,
+      "no_repeat_ngram_size": 0
+    },
+    "batch_size": 1,
+    "precision": "FP32 weights with FP16 autocast",
+    "seed": 42,
+    "package_versions": {
+      "torch": "2.11.0+cu128",
+      "transformers": "4.57.6",
+      "datasets": "4.8.5",
+      "trl": "1.16.0",
+      "peft": "0.21.2"
+    }
+  },
+  "complete": true,
+  "records": [
+    {
+      "id": "mistake01",
+      "category": "cooking",
+      "instruction": "I packed twelve mushrooms into a tiny frying pan, and now they are sitting in a puddle instead of browning. Should I add more oil?",
+      "generator": "base",
+      "output": "Yes, you should definitely add more oil to the pan. The reason for this is that the water from the mushrooms has absorbed some of the oil content, which can cause the mixture to become soggy or even float on top. Adding more oil will help prevent this issue and ensure that your mushrooms get crispy and golden brown.",
+      "generated_token_count": 66,
+      "ended_with_eos": true,
+      "hit_token_limit": false
+    },
+    {
+      "id": "mistake02",
+      "category": "cooking",
+      "instruction": "I poured all the stock into my risotto at once and walked away until it dried out. Why is the texture uneven?",
+      "generator": "base",
+      "output": "The texture of your risotto might be uneven because you didn't let it rest for long enough after pouring in the stock. When you pour in the stock, it can cause the rice to absorb some moisture, which can lead to an uneven texture. If you don't allow the risotto to sit for a bit, the starches in the rice will start to break down, causing them to clump together and create uneven textures. It's like when you're cooking pasta - if you don't let it cook for a while, the sauce won't have time to set properly, resulting in sticky or lumpy noodles.",
+      "generated_token_count": 126,
+      "ended_with_eos": true,
+      "hit_token_limit": false
+    },
+    {
+      "id": "mistake03",
+      "category": "cooking",
+      "instruction": "My cake looked cooked outside, so I removed it without checking the middle. It collapsed into a wet crater. What should I change next time?",
+      "generator": "base",
+      "output": "To prevent this from happening again, you can try to check the center of your cake before removing it. If it's still warm and pliable, you might be able to remove it without any issues. However, if it's cold or rigid, it's best to leave it in place until you're ready to bake another batch.",
+      "generated_token_count": 68,
+      "ended_with_eos": true,
+      "hit_token_limit": false
+    },
+    {
+      "id": "mistake04",
+      "category": "coding",
+      "instruction": "My program opens the same configuration file inside a loop a million times. I bought more RAM but it is still slow. What am I missing?",
+      "generator": "base",
+      "output": "I'm sorry for any confusion, but as an AI designed to assist with programming tasks, I don't have access to your specific code or environment. However, I can suggest some general troubleshooting steps:\n\n1. Check if the configuration file is properly formatted and has all required fields. Make sure that each field is correctly delimited and there are no empty lines in the file.\n\n2. Ensure that the configuration file is not too large. If it's very large, you might need to split it into smaller files or use compression techniques like gzip or bz2.\n\n3. Try using a different configuration file format. Some configuration files may be easier to read and write than others.\n\n4. Consider using a caching mechanism to store frequently accessed data. This could help reduce the number of database queries and improve overall performance.\n\n5. Optimize your database query structure. If possible, try to minimize the amount of data being retrieved from the database.\n\n6. Use a caching layer on top of your database. This can help cache frequently accessed data, reducing the load on the database.\n\n7. Monitor your system's resource usage. If the memory usage is high, consider adjusting your application's memory allocation limits.\n\nRemember, these are just suggestions and the best solution will depend on your specific situation. It would be beneficial to review your code line-by-line and see where the bottlenecks occur.",
+      "generated_token_count": 288,
+      "ended_with_eos": true,
+      "hit_token_limit": false
+    },
+    {
+      "id": "mistake05",
+      "category": "coding",
+      "instruction": "I fixed a failing test by deleting its assertion. The test suite is green now, so can I merge the change?",
+      "generator": "base",
+      "output": "As an AI, I don't have access to your code or any information about your project. However, as a general rule of thumb, it's generally not recommended to merge changes from another branch into your current branch unless you're certain that the changes will be compatible with your codebase and won't break existing functionality. This could lead to unexpected issues down the line. It's also important to consider the potential risks associated with merging changes from other branches, such as introducing new bugs or breaking existing features. Always ensure that you understand the implications before making any decisions.",
+      "generated_token_count": 114,
+      "ended_with_eos": true,
+      "hit_token_limit": false
+    },
+    {
+      "id": "mistake06",
+      "category": "coding",
+      "instruction": "I copied the same validation code into fourteen functions. Now every bug fix needs fourteen edits. Should I copy it into a fifteenth function too?",
+      "generator": "base",
+      "output": "No, copying the entire code into a new function is not necessary. You can simply paste the code into one of your existing functions and make any necessary changes to fix the bugs. This approach allows you to focus on making specific fixes rather than trying to apply the entire codebase at once.",
+      "generated_token_count": 59,
+      "ended_with_eos": true,
+      "hit_token_limit": false
+    },
+    {
+      "id": "mistake07",
+      "category": "general",
+      "instruction": "My presentation is tomorrow. I made sixty slides full of paragraphs and have not rehearsed once. Should I spend tonight adding animations?",
+      "generator": "base",
+      "output": "Yes, it's completely normal to feel overwhelmed with the amount of content you've prepared for your presentation. Adding animations can be beneficial in making your presentation more engaging and easier to follow. However, before deciding to add animations, consider the following:\n\n1. **Understand Your Audience**: Before adding any visual aids, try to understand who your audience is. What are their interests? What level of technical knowledge do they have about your topic? This will help you decide if an animation would be relevant or confusing.\n\n2. **Consider the Timeframe**: Animation can take up a significant portion of your time. If you're already at 60 slides, it might be better to stick with the original plan and save some extra time for additional visuals.\n\n3. **Keep It Simple**: While animations can make your presentation more interesting, they should also be simple enough that everyone understands what you're saying. Avoid complex animations unless absolutely necessary.\n\n4. **Test and Refine**: Once you've added the animations, test them out. Make sure everything works properly and that the animations don't distract from your main points. \n\n5. **Remember, Practice**: Even after adding animations, practice your presentation until you feel comfortable with the material. This will ensure that you deliver your message effectively without any distractions.\n\nRemember, the goal of your presentation isn't just to show off your creativity but to clearly convey your ideas to your audience. So, while animations can enhance your presentation, they shouldn't overshadow your key messages.",
+      "generated_token_count": 309,
+      "ended_with_eos": true,
+      "hit_token_limit": false
+    },
+    {
+      "id": "mistake08",
+      "category": "general",
+      "instruction": "I keep missing deadlines because I agree to every new task without checking my calendar. Should I just promise everyone faster delivery?",
+      "generator": "base",
+      "output": "While it's understandable that you want to meet your commitments and deliver on time, it might be more beneficial for you to prioritize self-care and set realistic expectations with your team. It's great that you're thinking about the bigger picture, but also remember that delivering quality work is crucial.\n\nInstead of making promises like \"faster delivery,\" consider setting clear goals and priorities for each project. This will help you focus on what needs to be done and when, rather than trying to rush through tasks. You can also establish open communication channels so that if there are any issues or concerns, they can address them promptly.\n\nAdditionally, don't underestimate the importance of taking breaks and practicing self-care. Missing deadlines can lead to burnout, which may negatively impact your productivity in the long run. By prioritizing your well-being and setting boundaries, you'll be better equipped to manage your workload and deliver high-quality results.",
+      "generated_token_count": 188,
+      "ended_with_eos": true,
+      "hit_token_limit": false
+    }
+  ]
+}

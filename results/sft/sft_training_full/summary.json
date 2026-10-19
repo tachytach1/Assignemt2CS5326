@@ -1,0 +1,11 @@
+{
+  "optimizer_steps": 938,
+  "attempted_steps": 938,
+  "skipped_steps": 0,
+  "best_optimizer_step": 938,
+  "best_validation_loss": 1.3795008834900906,
+  "final_validation_loss": 1.3795008834900906,
+  "processed_response_tokens": 8185872,
+  "elapsed_seconds": 5161.710379232,
+  "peak_allocated_gpu_gib": 12.435035228729248
+}

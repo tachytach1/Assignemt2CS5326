@@ -1,0 +1,47 @@
+# Python environment and caches
+*.egg-info/
+.venv/
+venv/
+__pycache__/
+.pytest_cache/
+.ipynb_checkpoints/
+*.pyc
+
+# Secrets
+.env
+.env.*
+*.pem
+*.key
+
+# Model weights and checkpoints
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.gguf
+*.onnx
+*.h5
+*.hdf5
+
+# Large datasets and caches
+*.arrow
+*.parquet
+*.npy
+*.npz
+*.pkl
+*.pickle
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# Compressed training artifacts
+*.zip
+*.tar
+*.tar.gz
+*.7z
+
+# Training caches
+huggingface_cache/
+wandb/
+runs/

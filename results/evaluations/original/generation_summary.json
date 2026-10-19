@@ -1,0 +1,47 @@
+[
+  {
+    "model": "sft",
+    "dataset": "hh",
+    "responses": 300,
+    "empty_responses": 0,
+    "responses_ending_with_eos": 196,
+    "responses_hitting_token_limit": 104,
+    "mean_generated_tokens": 173.66666666666666
+  },
+  {
+    "model": "sft",
+    "dataset": "alpaca",
+    "responses": 300,
+    "empty_responses": 0,
+    "responses_ending_with_eos": 183,
+    "responses_hitting_token_limit": 117,
+    "mean_generated_tokens": 163.70333333333335
+  },
+  {
+    "model": "dpo_hh",
+    "dataset": "hh",
+    "responses": 300,
+    "empty_responses": 0,
+    "responses_ending_with_eos": 236,
+    "responses_hitting_token_limit": 64,
+    "mean_generated_tokens": 153.85333333333332
+  },
+  {
+    "model": "dpo_ultrafeedback",
+    "dataset": "alpaca",
+    "responses": 300,
+    "empty_responses": 0,
+    "responses_ending_with_eos": 130,
+    "responses_hitting_token_limit": 170,
+    "mean_generated_tokens": 195.98333333333332
+  },
+  {
+    "model": "base",
+    "dataset": "alpaca",
+    "responses": 300,
+    "empty_responses": 0,
+    "responses_ending_with_eos": 162,
+    "responses_hitting_token_limit": 138,
+    "mean_generated_tokens": 171.87666666666667
+  }
+]

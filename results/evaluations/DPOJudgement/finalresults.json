@@ -1,0 +1,14 @@
+{
+  "hh": {
+    "wins": 116,
+    "ties": 38,
+    "losses": 146,
+    "adjusted_win_rate": 45.0
+  },
+  "alpaca": {
+    "wins": 125,
+    "ties": 18,
+    "losses": 157,
+    "adjusted_win_rate": 44.6667
+  }
+}

@@ -1,0 +1,36 @@
+[
+  {
+    "dataset": "alpaca",
+    "candidate_model": "dpo_ultrafeedback_intact",
+    "baseline_model": "sft",
+    "maximum_new_tokens": 256,
+    "repetition_penalty": 1.0,
+    "judge_model": "google/gemini-3.6-flash",
+    "total_pairs": 300,
+    "valid_judgments": 300,
+    "wins": 108,
+    "ties": 48,
+    "losses": 144,
+    "unresolved": 0,
+    "win_fraction_among_valid": 0.36,
+    "win_rate_among_decisive": 0.42857142857142855,
+    "tie_adjusted_win_rate": 0.44
+  },
+  {
+    "dataset": "alpaca",
+    "candidate_model": "dpo_ultrafeedback_intact",
+    "baseline_model": "sft",
+    "maximum_new_tokens": 512,
+    "repetition_penalty": 1.0,
+    "judge_model": "google/gemini-3.6-flash",
+    "total_pairs": 300,
+    "valid_judgments": 300,
+    "wins": 117,
+    "ties": 44,
+    "losses": 139,
+    "unresolved": 0,
+    "win_fraction_among_valid": 0.39,
+    "win_rate_among_decisive": 0.45703125,
+    "tie_adjusted_win_rate": 0.4633333333333333
+  }
+]

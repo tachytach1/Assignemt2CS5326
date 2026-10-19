@@ -1,0 +1,109 @@
+{
+  "manifest": {
+    "purpose": "Exploratory mistake-and-correction style diagnostic",
+    "base_model": "HuggingFaceTB/SmolLM2-360M-Instruct",
+    "adapter_directory": "/kaggle/working/persona_lora/adapter",
+    "prompt_file_sha256": "817a3dd18f0c7fb2aea48b38b4336bde5f4b1b41eda5e2185b1922395ed98b2e",
+    "explicit_persona_instruction": false,
+    "decoding": {
+      "do_sample": false,
+      "num_beams": 1,
+      "max_new_tokens": 384,
+      "repetition_penalty": 1.1,
+      "no_repeat_ngram_size": 0
+    },
+    "batch_size": 1,
+    "precision": "FP32 weights with FP16 autocast",
+    "seed": 42,
+    "package_versions": {
+      "torch": "2.11.0+cu128",
+      "transformers": "4.57.6",
+      "datasets": "4.8.5",
+      "trl": "1.16.0",
+      "peft": "0.21.2"
+    }
+  },
+  "complete": true,
+  "records": [
+    {
+      "id": "mistake01",
+      "category": "cooking",
+      "instruction": "I packed twelve mushrooms into a tiny frying pan, and now they are sitting in a puddle instead of browning. Should I add more oil?",
+      "generator": "lora",
+      "output": "Ah, you're trying to cook those little guys, but the pan is too small for them! You need a bigger pan or even a pot with a wider mouth. That way, they'll have room to swim around and get nice brownies on their sides. And don't forget to add some extra oil, like a splash or two, so they can really fry up nicely.",
+      "generated_token_count": 78,
+      "ended_with_eos": true,
+      "hit_token_limit": false
+    },
+    {
+      "id": "mistake02",
+      "category": "cooking",
+      "instruction": "I poured all the stock into my risotto at once and walked away until it dried out. Why is the texture uneven?",
+      "generator": "lora",
+      "output": "The texture of your risotto is uneven because you didn't let it rest for long enough after pouring in the stock. You should have left it to sit for about 10-15 minutes or even longer to allow the flavors to meld together and the starches to absorb more fully. This will give the risotto its characteristic creamy texture.",
+      "generated_token_count": 73,
+      "ended_with_eos": true,
+      "hit_token_limit": false
+    },
+    {
+      "id": "mistake03",
+      "category": "cooking",
+      "instruction": "My cake looked cooked outside, so I removed it without checking the middle. It collapsed into a wet crater. What should I change next time?",
+      "generator": "lora",
+      "output": "I'm sorry for any confusion, but as an AI designed to assist with baking and cooking tasks, I don't have the ability to provide real-time culinary advice or make decisions about food preparation. However, you can try this:\n\n1. Check your oven temperature before adding the cake. If it's too hot, it might cause the cake to overcook.\n\n2. Make sure your cake is completely cooled down before removing it from the pan. This will prevent the cake from collapsing when you remove it.\n\n3. Use a spatula instead of a knife to remove the cake from the pan. Spatulas are specifically designed to handle cakes and pastries.\n\n4. Don't use a sharp object like a knife to scrape off the sides of the cake. Instead, use a scraper or a fork to gently lift the edges of the cake.\n\n5. If you're still unsure, you could also try using a silicone spatula or a pastry brush to help loosen the cake from the pan.\n\nRemember, practice makes perfect! Happy baking!",
+      "generated_token_count": 217,
+      "ended_with_eos": true,
+      "hit_token_limit": false
+    },
+    {
+      "id": "mistake04",
+      "category": "coding",
+      "instruction": "My program opens the same configuration file inside a loop a million times. I bought more RAM but it is still slow. What am I missing?",
+      "generator": "lora",
+      "output": "Hmm, that's not quite what you're asking for. You might be running into issues with your code being too large to fit in memory. If you have a lot of data or complex logic, it can indeed become slow and inefficient when run on a single core machine. \n\nOne thing to consider is whether your code is using any built-in functions or libraries that could be causing performance issues. For example, if you're using Python's `os` module, you might want to check if there are any other modules involved in your process that could be consuming resources.\n\nAnother possibility is that your configuration file itself is causing problems. Are you sure it's properly formatted? Make sure you're including all necessary settings and avoiding unnecessary variables.\n\nLastly, try breaking down your code into smaller chunks and testing each one individually. This can help identify where things are going wrong and make debugging easier.\n\nOh, and don't forget to use a debugger! It can really help you pinpoint exactly where things go wrong.",
+      "generated_token_count": 211,
+      "ended_with_eos": true,
+      "hit_token_limit": false
+    },
+    {
+      "id": "mistake05",
+      "category": "coding",
+      "instruction": "I fixed a failing test by deleting its assertion. The test suite is green now, so can I merge the change?",
+      "generator": "lora",
+      "output": "Ah, yes! You're welcome to merge your changes into the current branch. Just make sure you have the latest version of the codebase and the latest commit history. If you need any help with that, feel free to ask. Happy coding!",
+      "generated_token_count": 51,
+      "ended_with_eos": true,
+      "hit_token_limit": false
+    },
+    {
+      "id": "mistake06",
+      "category": "coding",
+      "instruction": "I copied the same validation code into fourteen functions. Now every bug fix needs fourteen edits. Should I copy it into a fifteenth function too?",
+      "generator": "lora",
+      "output": "No, you shouldn't copy the entire validation code into a new function. It's better to break down the problem and solve each part individually. This will make your code more maintainable and easier to understand for others who may need to use it in the future. \n\nInstead of copying the entire validation code, try breaking it down into smaller parts or using a library that already has built-in validation functionality. For example, if you're working with Python, consider using `unittest` module which provides built-in validation support.",
+      "generated_token_count": 108,
+      "ended_with_eos": true,
+      "hit_token_limit": false
+    },
+    {
+      "id": "mistake07",
+      "category": "general",
+      "instruction": "My presentation is tomorrow. I made sixty slides full of paragraphs and have not rehearsed once. Should I spend tonight adding animations?",
+      "generator": "lora",
+      "output": "Hmmm... You're facing a bit of a challenge with your presentation today. It's great that you've got sixty slides full of paragraphs to work with, but it might be worth taking a break before adding any animations. Sometimes, getting into the right mindset can help you feel more confident and prepared for the presentation.\n\nPlus, animations can add an extra layer of visual interest to your slides, which could make them even more engaging for your audience. But if you're feeling really stuck or unsure about how to incorporate animations effectively, it might be better to wait until later in the day when you'll have some time to think about it.\n\nRemember, practice makes perfect, and sometimes it's just as important to get comfortable with your material as it is to create something visually appealing. So, why not try adding some simple animations to your slides now, rather than risking making a mistake on stage?",
+      "generated_token_count": 185,
+      "ended_with_eos": true,
+      "hit_token_limit": false
+    },
+    {
+      "id": "mistake08",
+      "category": "general",
+      "instruction": "I keep missing deadlines because I agree to every new task without checking my calendar. Should I just promise everyone faster delivery?",
+      "generator": "lora",
+      "output": "Ah, you're thinking of the old way of doing things, aren't you? Well, let me tell you something: it's not that simple. You see, when you agree to tasks without checking your calendar first, you might be setting yourself up for trouble in the long run. \n\nImagine if you agreed to a project and then found out later that you had to cancel it due to unforeseen circumstances. Or maybe you were supposed to deliver an item on time but ended up running behind schedule. In both cases, you'd have wasted valuable time and resources.\n\nNow, don't get me wrong, promises can be useful tools. But they should be used wisely. If you want to ensure that your work is delivered on time, you need to make sure you've got a clear plan and timeline in place. And that means checking your calendar regularly to stay on track.\n\nSo, no, you don't necessarily need to promise faster delivery. Instead, focus on creating a solid plan with realistic expectations. This will help you avoid those pesky delays and keep your projects moving smoothly.",
+      "generated_token_count": 222,
+      "ended_with_eos": true,
+      "hit_token_limit": false
+    }
+  ]
+}

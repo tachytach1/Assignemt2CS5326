@@ -1,0 +1,7 @@
+{
+  "dataset": "provided synthetic helpful/harmless evaluation",
+  "source_path": "/kaggle/input/notebooks/kangerz22/pa2-dpotraining/pa2-small-model-alignment/eval_sets/hh_rlhf_eval_300_seed42.json",
+  "source_sha256": "0731105407d06152e584c722717712be4f418f221a8d5c487bb924c4d91c38c6",
+  "selection": "all provided records in original order",
+  "prompt_count": 300
+}

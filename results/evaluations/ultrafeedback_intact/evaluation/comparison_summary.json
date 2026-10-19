@@ -1,0 +1,16 @@
+[
+  {
+    "maximum_new_tokens": 256,
+    "pairs": 300,
+    "candidate_in_position_a": 150,
+    "candidate_in_position_b": 150,
+    "identical_response_pairs": 9
+  },
+  {
+    "maximum_new_tokens": 512,
+    "pairs": 300,
+    "candidate_in_position_a": 150,
+    "candidate_in_position_b": 150,
+    "identical_response_pairs": 8
+  }
+]

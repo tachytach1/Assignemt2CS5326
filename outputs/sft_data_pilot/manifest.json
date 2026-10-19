@@ -1,0 +1,50 @@
+{
+  "model_name": "Qwen/Qwen2.5-0.5B",
+  "model_revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+  "dataset_name": "HuggingFaceH4/ultrachat_200k",
+  "dataset_revision": "8049631c405ae6576f93f445c6b8166f76f5505a",
+  "seed": 42,
+  "shuffle_buffer": 1000,
+  "maximum_sequence_length": 512,
+  "prompt_template": "### Instruction:\n{instruction}\n\n### Response:\n",
+  "conversation_policy": "first user and assistant exchange only",
+  "tokenization_policy": "separate prompt and response encoding",
+  "truncation_policy": "right truncation after response EOS append",
+  "padding_side": "right",
+  "padding_token_id": 151643,
+  "eos_token_id": 151643,
+  "training": {
+    "source_split": "train_sft",
+    "requested_examples": 128,
+    "examined_examples": 141,
+    "invalid_examples": 0,
+    "duplicate_instructions": 0,
+    "examples_without_response_tokens": 13,
+    "accepted_examples": 128,
+    "examples_at_sequence_limit": 65,
+    "total_sequence_tokens": 53271,
+    "total_response_tokens": 39428,
+    "mean_sequence_length": 416.1796875,
+    "mean_response_length": 308.03125
+  },
+  "validation": {
+    "source_split": "test_sft",
+    "requested_examples": 32,
+    "examined_examples": 33,
+    "invalid_examples": 0,
+    "duplicate_instructions": 0,
+    "examples_without_response_tokens": 1,
+    "accepted_examples": 32,
+    "examples_at_sequence_limit": 12,
+    "total_sequence_tokens": 12699,
+    "total_response_tokens": 8802,
+    "mean_sequence_length": 396.84375,
+    "mean_response_length": 275.0625
+  },
+  "package_versions": {
+    "torch": "2.14.1+cpu",
+    "transformers": "4.57.6",
+    "datasets": "4.8.5",
+    "huggingface_hub": "0.36.2"
+  }
+}

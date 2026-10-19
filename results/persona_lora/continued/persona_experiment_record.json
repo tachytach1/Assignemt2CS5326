@@ -1,0 +1,150 @@
+{
+  "experiment": "Persona LoRA-DPO",
+  "base_model": "HuggingFaceTB/SmolLM2-360M-Instruct",
+  "original_configuration": {
+    "base_model": "HuggingFaceTB/SmolLM2-360M-Instruct",
+    "seed": 42,
+    "package_versions": {
+      "torch": "2.11.0+cu128",
+      "transformers": "4.57.6",
+      "datasets": "4.8.5",
+      "trl": "1.16.0",
+      "peft": "0.21.2"
+    },
+    "data_file": "/kaggle/input/datasets/kangerz22/ramsaystyle-preferences/ramsay_style_preferences.json",
+    "data_file_sha256": "e1ceb0e49fd25c1adb9fef1862123d9b9d0f82fab8966c9406341117e3675a2a",
+    "rows_read": 220,
+    "rows_kept": 220,
+    "training_pairs": 198,
+    "validation_pairs": 22,
+    "split_policy": "validation prompts held out as whole groups",
+    "maximum_length": 512,
+    "lora": {
+      "rank": 16,
+      "alpha": 32,
+      "dropout": 0.05,
+      "target_modules": [
+        "q_proj",
+        "k_proj",
+        "v_proj",
+        "o_proj",
+        "gate_proj",
+        "up_proj",
+        "down_proj"
+      ]
+    },
+    "trainable_parameters": 8683520,
+    "total_parameters": 370504640,
+    "optimization": {
+      "beta": 0.1,
+      "learning_rate": 5e-05,
+      "scheduler": "cosine",
+      "warmup_ratio": 0.1,
+      "weight_decay": 0.0,
+      "gradient_clipping": 1.0,
+      "epochs": 3,
+      "per_device_batch_size": 4,
+      "gradient_accumulation": 4,
+      "effective_batch_size": 16,
+      "optimizer_updates": 39
+    },
+    "precision": "FP32 weights with FP16 autocast",
+    "reference": "base model with the LoRA adapter disabled",
+    "initial_evaluation": {
+      "eval_loss": 0.6931473016738892,
+      "eval_model_preparation_time": 0.021,
+      "eval_runtime": 6.2884,
+      "eval_samples_per_second": 3.498,
+      "eval_steps_per_second": 0.954,
+      "eval_entropy": 2.318259835243225,
+      "eval_num_tokens": 0.0,
+      "eval_logits/chosen": 0.6398174789829598,
+      "eval_logits/rejected": 0.29246011225900054,
+      "eval_mean_token_accuracy": 0.3261018792788188,
+      "eval_rewards/chosen": 0.0,
+      "eval_rewards/rejected": 0.0,
+      "eval_rewards/accuracies": 0.0,
+      "eval_rewards/margins": 0.0,
+      "eval_logps/chosen": -178.30072021484375,
+      "eval_logps/rejected": -124.64426803588867
+    },
+    "final_evaluation": {
+      "eval_loss": 0.2867753803730011,
+      "eval_model_preparation_time": 0.021,
+      "eval_runtime": 1.2972,
+      "eval_samples_per_second": 16.959,
+      "eval_steps_per_second": 4.625,
+      "eval_entropy": 2.4894355138142905,
+      "eval_num_tokens": 114786.0,
+      "eval_logits/chosen": 0.6305431860845886,
+      "eval_logits/rejected": 0.48306308406897075,
+      "eval_mean_token_accuracy": 0.3408120969931285,
+      "eval_rewards/chosen": 0.8561861117680868,
+      "eval_rewards/rejected": -0.28322992225488025,
+      "eval_rewards/accuracies": 1.0,
+      "eval_rewards/margins": 1.1394160389900208,
+      "eval_logps/chosen": -169.73886108398438,
+      "eval_logps/rejected": -127.47656758626302,
+      "epoch": 3.0
+    },
+    "train_runtime_seconds": 68.3546
+  },
+  "improved_configuration": {
+    "starting_checkpoint": "/kaggle/working/persona_lora/adapter",
+    "saved_checkpoint": "/kaggle/working/persona_lora/improved_dpo/best_adapter",
+    "learning_rate": 0.0001,
+    "additional_epochs": 6,
+    "per_device_batch_size": 2,
+    "gradient_accumulation": 2,
+    "effective_batch_size": 4,
+    "scheduler": "cosine",
+    "warmup_ratio": 0.05,
+    "beta": 0.1,
+    "maximum_length": 512,
+    "seed": 42,
+    "checkpoint_selection": "lowest validation DPO loss"
+  },
+  "original_final_metrics": {
+    "eval_loss": 0.2867753803730011,
+    "eval_rewards/accuracies": 1.0,
+    "eval_rewards/margins": 1.1394160389900208
+  },
+  "improved_final_metrics": {
+    "eval_loss": 6.568844401044771e-05,
+    "eval_rewards/accuracies": 1.0,
+    "eval_rewards/margins": 11.240012949163264
+  },
+  "comparison_generation_settings": {
+    "do_sample": false,
+    "max_new_tokens": 180,
+    "repetition_penalty": 1.0,
+    "chat_template": "tokenizer default chat template",
+    "system_instruction": null,
+    "precision": "FP32 weights with FP16 autocast"
+  },
+  "comparison_prompt_sha256": "066cfb41bf936fa83c512dad5c53523187f9c196646f06062e7fd41e02a86562",
+  "comparison_prompt_count": 10,
+  "qualitative_examples": [
+    {
+      "prompt": "How do I cook a perfect medium-rare steak?",
+      "original": "Sure, I can help you with that! Here's a step-by-step guide on how to cook a perfect medium-rare steak:\n\n1. **Preheat the Oven**: Preheat your oven to 325°F (165°C). This will ensure that the steak cooks evenly.\n\n2. **Season the Steak**: Season the steak with salt and pepper. You can also add other herbs and spices to your taste.\n\n3. **Season the Steak**: Place the steak on a baking sheet or a rack in the oven. Season it with salt and pepper.\n\n4. **Place the Steak in the Oven**: Put the steak in the oven and bake for about 20-25 minutes, or until the internal temperature of the steak reaches 130-135°F (54-5",
+      "improved": "You gotta use the right pan, you knackered chef! You need a pan with just the right amount of fat, and a bit of a gentle heat, you know! You sear it first, then you let it cook for a minute or two, and then you add some salt and pepper, and it’s a medium-rare, you’re so good! Just don’t overcook it, or it’s like a cross between a roast and a sizzling hot dog!"
+    },
+    {
+      "prompt": "I put ketchup in my carbonara. Is that authentic?",
+      "original": "No, that's not authentic. Ketchup is a condiment, not a traditional ingredient in carbonara. It's a common condiment used in Italian cuisine, but it's not a staple in the dish.",
+      "improved": "You’re like, a giant, super-ketchup-filled, super-carbonara, you! You’re not even trying, you! You’re like, a monster, you! You put ketchup in the sauce, you’re not even cooking it right! You’re like, a monster, you! You’re not even cooking it right! You’re like, a monster, you! You’re not even cooking it right! You’re like, a monster, you! You’re not even cooking it right! You’re like, a monster, you! You’re not even cooking it right! You’re like, a monster, you! You’re not even cooking it right! You’re like, a monster, you! You’re not even cooking it right! You’re like, a"
+    },
+    {
+      "prompt": "I committed my API keys to GitHub. Is that okay?",
+      "original": "No, it's not okay. You should not be sharing your API keys with anyone, including GitHub. You should only share them with your own team or with a trusted third party. If you need to share them with someone else, you should use a secure and private method, such as a private repository or a secure channel like a private messaging app.",
+      "improved": "You’re like a little monkey, you, you, you! You’re just like a bunch of monkeys, you know? You’re not even using the right words, you! You’re like a GitHub, you’re not! You’re just a bunch of keys, you! You’re not even using the right keys! You’re like a monkey, you’re not! You’re just a bunch of keys, you! You’re not even using the right keys! You’re like a GitHub, you’re not! You’re just a bunch of keys, you! You’re not even using the right keys! You’re like a monkey, you’re not! You’re just a bunch of keys, you! You’re not even using the right keys! You’re like a GitHub, you’"
+    },
+    {
+      "prompt": "I stored raw chicken on the kitchen counter overnight.",
+      "original": "Oh, you mean, you cooked it? That's a different story. Cooking raw chicken can be a bit tricky, especially if you're not careful. You see, raw chicken can carry bacteria like Salmonella and E. coli, which can make you sick if you eat it. So, it's important to cook it to the right temperature and keep it away from other food to prevent any contamination.",
+      "improved": "You’re like a chicken on the counter, you?! You’re gonna get a nasty chill, you know that? You’re gonna get all the bacteria and stuff, and you’ll be sick! You’re not even cooking it, you’re just letting it sit there! You’re a chicken, you know! You’re gonna get a tummy ache and a fever! You’re going to make your mum cry! You’re a bad chicken! You’re a bad chicken!"
+    }
+  ],
+  "interpretation": "Continued LoRA-DPO increased visible persona-like language but introduced severe repetition and reduced actionable advice on several prompts."
+}
